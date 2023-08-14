@@ -943,29 +943,13 @@ Banner Style
   overflow: hidden;
 }
 
-.main-banner:after {
-  content: '';
-  background-image: none;
+.main-banner {
+  background-image: url(../images/intro1.jpg);
   background-repeat: no-repeat;
-  position: absolute;
-  left: -70px;
-  top: 60px;
-  width: 262px;
-  height: 625px;
-  z-index: 1;
+  background-position: right center;
+  background-size: 100% 100%;
 }
 
-.main-banner:before {
-  content: '';
-  background-image: none;
-  background-repeat: no-repeat;
-  position: absolute;
-  right: 0;
-  top: 60px;
-  width: 1159px;
-  height: 797px;
-  z-index: -1;
-}
 
 .main-banner .left-content {
   margin-right: 15px;
@@ -1332,7 +1316,7 @@ Services Style
 }
 
 .services .naccs .menu div {
-  color: #2a2a2a;
+  color: #fff;
   margin: 0px;
   width: 15%;
   font-size: 20px;
@@ -1349,11 +1333,11 @@ Services Style
   display: inline-block;
   width: 100%;
   padding: 30px 0px;
-  background-color: #fff;
+  background-color: #99334d;
 }
 
 .services .naccs .menu div.active {
-  box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+  box-shadow: 0px 0px 30px rgba(0,0,0,0.5);
 }
 
 .services ul.nacc {
@@ -1438,79 +1422,6 @@ Services Style
 }
 
 
-
-/* 
----------------------------------------------
-Free Quote
---------------------------------------------- 
-*/
-
-.free-quote {
-  background-image: url(../images/burgandy.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  padding: 120px 0px;
-  text-align: center;
-  position: relative;
-  z-index: 2;
-  margin-top: 130px;
-}
-
-.free-quote .section-heading {
-  margin-bottom: 60px;
-}
-
-.free-quote .section-heading h6,
-.free-quote .section-heading h4 {
-  color: #fff;
-}
-
-.free-quote .section-heading .line-dec {
-  margin: 0 auto;
-  background-color: #fff;
-}
-
-.free-quote form {
-  background-color: #fff;
-  display: inline-block;
-  width: 100%;
-  min-height: 80px;
-  border-radius: 40px;
-  position: relative;
-  z-index: 1;
-}
-
-.free-quote form input {
-  width: 100%;
-  margin-top: 20px;
-  margin-left: 30px;
-  color: #afafaf;
-  font-weight: 400;
-  font-size: 15px;
-  height: 40px;
-  background-color: transparent;
-  border-bottom: 1px solid #eee;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  position: relative;
-  z-index: 2;
-  outline: none;
-}
-
-.free-quote form button {
-  width: 100%;
-  height: 80px;
-  border-top-right-radius: 40px;
-  border-bottom-right-radius: 40px;
-  outline: none;
-  border: none;
-  margin-left: 30px;
-  background-color: #800020;
-  font-size: 15px;
-  color: #fff;
-}
 
 
 /* 
@@ -1642,157 +1553,66 @@ Portfolio
 
 /* 
 ---------------------------------------------
-Blog
+Testimonial
 --------------------------------------------- 
 */
-
-.blog:before {
-  content: '';
-  background-image: none;
-  background-repeat: no-repeat;
-  position: absolute;
-  left: 0;
-  top: 0px;
-  width: 961px;
-  height: 1020px;
-  z-index: 0;
+.grid-container{
+  display: grid;
+  justify-content: space-evenly;
+  grid-template-columns: 500px 500px 500px; 
+  gap: 10px;
+  padding: 10px;
 }
-
-.blog {
-  position: relative;
-  padding-top: 130px;
-}
-
-.blog .section-heading {
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
-  margin-bottom: 80px;
+  padding: 20px 0;
+  font-size: 30px;
 }
 
-.blog .section-heading .line-dec {
-  margin: 0 auto;
-}
 
-.show-up {
+.testimonial-cards .container .box{
   position: relative;
-  z-index: 200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 550px;
+  margin: 20px;
+  background: #800020;
+  border-radius: 10%;
 }
-
-.blog-post {
-  box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
-  border-radius: 25px;
-}
-
-.blog-post .thumb img {
-  border-top-right-radius: 23px;
-  border-top-left-radius: 23px;
-}
-
-.blog-post .down-content {
-  border-bottom-right-radius: 23px;
-  border-bottom-left-radius: 23px;
-  background-color: #fff;
+.testimonial-cards .container .box .content{
   padding: 30px;
+  text-align: center;
 }
-
-.blog-post .down-content span.category {
-  font-size: 15px;
+.testimonial-cards .container .box .content p{
   color: #fff;
-  padding: 8px 12px;
-  background-color: #800020;
-  border-radius: 18px;
-  display: inline-block;
+  padding: 20px 0;
+  font-size: 12px;
 }
 
-.blog-post .down-content span.date {
-  font-size: 15px;
-  color: #000000;
-  text-align: right;
-  float: right;
-  margin-top: 4px;
-}
-
-.blog-post .down-content h4 {
-  font-size: 20px;
-  font-weight: 700;
-  color: #2a2a2a;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  line-height: 30px;
-}
-
-.blog-post .down-content p {
-  margin-bottom: 30px;
-}
-
-.blog-post .down-content span.author {
-  font-size: 15px;
-  color: #2a2a2a;
-}
-
-.blog-post .down-content span.author img {
-  max-width: 56px;
-  border-radius: 50%;
-  margin-right: 15px;
-}
-
-.blog-post .down-content .border-first-button {
-  display: inline-block;
-  float: right;
-}
-
-.blog-posts {
-  margin-left: 30px;
-}
-
-.post-item {
-  margin-bottom: 62px;
-}
-
-.last-post-item {
-  margin-bottom: 0px;
-}
-
-.post-item .thumb {
-  display: inline-block;
-  float: left;
-  margin-right: 30px;
-}
-
-.post-item .thumb img {
-  border-radius: 23px;
-  display: inline-block;
-}
-
-.post-item .right-content {
-  padding-top: 20px;
-}
-
-.post-item .right-content span.category {
-  font-size: 15px;
+.testimonial-cards .container .box .content h3{
   color: #fff;
-  padding: 8px 12px;
-  background-color: #800020;
-  border-radius: 18px;
-  display: inline-block;
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  padding-bottom: 30px;
 }
 
-.post-item .right-content span.date {
-  font-size: 15px;
-  color: #000000;
-  text-align: right;
-  float: right;
-  margin-top: 4px;
+@media (min-width: 300px) {
+  .grid-container { grid-template-columns: repeat(1, 1fr); }
+
 }
 
-.post-item .right-content h4 {
-  font-size: 20px;
-  font-weight: 700;
-  color: #2a2a2a;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  line-height: 30px;
+@media (min-width: 950px) {
+  .grid-container { grid-template-columns: repeat(2, 1fr); }
 }
 
+@media (min-width: 1500px) {
+  .grid-container { grid-template-columns: repeat(3, 1fr); }
+}
 
 /* 
 ---------------------------------------------
@@ -2146,3 +1966,5 @@ footer p a {
     padding: 30px;
   }
 }
+
+
